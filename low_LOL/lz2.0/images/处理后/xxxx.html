@@ -1,0 +1,25 @@
+<body></body>
+<script type="text/javascript">
+	var createIMG=document.createElement('img');
+		document.body.appendChild(createIMG);
+		createIMG.style.width='168px';
+		createIMG.style.height='154px';
+		createIMG.src='0.png';
+		createIMG.style.border='1px solid red';
+		createIMG.style.position='absolute';
+		createIMG.style.left='0';
+		createIMG.style.top='0';
+
+		var i=0;
+		function NoMoveLeft(){
+			var IMGarr1=new Array('0.png','1.png','2.png','3.png','2.png','1.png','0.png','12.png','13.png','14.png','15.png','14.png','13.png','12.png');
+			setInterval(function(){
+				createIMG.src=IMGarr1[i];
+				i++;
+				if(i==14){
+					i=0;
+				},200)
+			
+		}
+		NoMoveLeft();
+</script>

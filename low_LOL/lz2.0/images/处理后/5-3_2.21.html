@@ -1,0 +1,130 @@
+<style type="text/css">
+	*{margin:0px;}
+</style>
+<body>
+	<script type="text/javascript">
+		var createIMG=document.createElement('img');
+		document.body.appendChild(createIMG);
+		createIMG.style.width='168px';
+		createIMG.style.height='154px';
+		createIMG.src='0.png';
+		createIMG.style.border='1px solid red';
+		createIMG.style.position='absolute';
+		createIMG.style.left='0';
+		var i=0;
+		var j=0;
+		var ZT=false;
+		function run(){
+				var IMGarr1=new Array('0.png','1.png','2.png','3.png','2.png','1.png','0.png','12.png','13.png','14.png','15.png','14.png','13.png','12.png');
+				createIMG.src=IMGarr1[i];
+				i++;
+				if(i==14){
+					i=0;
+				}
+		}
+		function NoMove(){
+			if (!ZT) {
+				ZT=true;
+				timer1=setInterval(run,200);
+			}
+		}
+		function MoveRight(){
+				var IMGarr2=new Array('4.png','5.png','6.png','7.png','8.png','9.png','10.png');
+				var timer21=setInterval(function(){
+				// clearInterval(timer1);
+				createIMG.src=IMGarr2[j];
+				j++;
+				if (j==6) {
+					j=0;
+					clearInterval(timer21);
+					NoMove();
+				}
+			},33)	
+		}
+		function MoveRightOffset(){
+			var k=0; 
+			var time22=setInterval(function(){
+				createIMG.style.left=Math.min(1000,(createIMG.offsetLeft+k))+'px';
+				k+=2;
+				if (k==16) {
+					clearInterval(time22);
+				}
+			},33)
+		}
+
+
+
+
+		function run1(){
+				var IMGarr1=new Array('x0.png','x1.png','x2.png','x3.png','x2.png','x1.png','x0.png','x12.png','x13.png','x14.png','x15.png','x14.png','x13.png','x12.png');
+				createIMG.src=IMGarr1[i];
+				i++;
+				if(i==14){
+					i=0;
+				}
+		}
+		function NoMove(){
+			if (!ZT) {
+				ZT=true;
+				timer1=setInterval(run1,200);
+			}
+		}
+		function MoveLeft(){
+				var IMGarr2=new Array('x4.png','x5.png','x6.png','x7.png','x8.png','x9.png','x10.png');
+				var timer21=setInterval(function(){
+				// clearInterval(timer1);
+				createIMG.src=IMGarr2[j];
+				j++;
+				if (j==6) {
+					j=0;
+					clearInterval(timer21);
+					NoMove();
+				}
+			},33)	
+		}
+		function MoveLeftOffset(){
+			var k=0; 
+			var time22=setInterval(function(){
+				createIMG.style.left=Math.min(1000,(createIMG.offsetLeft+k))+'px';
+				k+=2;
+				if (k==16) {
+					clearInterval(time22);
+				}
+			},33)
+		}
+
+
+		document.onkeydown = function (event){
+		var evt = event || window.event;
+		// w-87  s-83  a-65  d-68
+		//   38    40    37     39
+		// alert(evt.keyCode)
+		switch (evt.keyCode) {
+			case 38:
+			case 87: // 上
+				
+				
+				break;
+			case 40:
+			case 83: // 下 
+			
+				break;
+			case 37:
+			case 65: // 左 
+				
+				break;
+			case 39:
+			case 68: // 右 
+				MoveRight();
+				MoveRightOffset();
+			// alert(ZT);
+				break;					
+			default:
+				break;
+		}
+	}	
+
+		
+
+	</script>
+</body>

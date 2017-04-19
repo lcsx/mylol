@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/kaishi.css">
+</head>
+<body onload="focus_on()">
+<div id="top">
+	<div id="top-1">
+	</div>
+	<div id="top-21" class="fl">
+	</div>
+	<div id="top-22" class="fl">
+		<ul>
+			<li class="top-2ziti"><a href="">官方网站</a></li>
+			<li></li>
+		</ul>
+	</div>
+	<div class="kuang fl" id="kuang4"></div>
+	<div id="top-23" class="fl">
+		<ul>
+			<li class="top-2ziti"><a href="">注册账号</a></li>
+			<li></li>
+		</ul>
+	</div>
+	<div class="kuang fl" id="kuang6"></div>
+	<div id="top-24" class="fl">
+		<ul>
+			<li class="top-2ziti"><a href="">新手指南</a></li>
+			<li></li>
+		</ul>
+	</div>
+	<div class="kuang fl" id="kuang8"></div>
+	<div id="top-25" class="fl">
+		<ul>
+			<li class="top-2ziti"><a href="">在线客服</a></li>
+			<li></li>
+		</ul>
+	</div>
+	<div class="kuang fl" id="kuang10"></div>
+	<div id="top-26" class="fl">
+		<ul>
+			<li class="top-2ziti"><a href="">账户充值</a></li>
+			<li></li>
+		</ul>
+	</div>
+	<div class="kuang fl" id="kuang12"></div>
+	<div id="top-27" class="fl">
+		<ul>
+			<li class="top-2ziti"><a href="">官方论坛</a></li>
+			<li></li>
+		</ul>
+	</div>
+	<div id="top-28" class="fl"></div>
+</div>	
+<div id="main">
+	<div id="main-left-bar" class="fl"></div>
+	<div id="main-middle" class="fl">
+		<div id="movediv">
+			<img src="dl/22/images/111.jpg">
+		</div>
+	</div>
+	<div id="main-right-bar" class="fl"></div>
+</div>
+<div id="buttombar"></div> 
+<div id="denglu">
+	<div id="denglu-innerdiv">
+	<form action="" method="" name="form1">
+		<ul>
+			<li><span class="dengluziti1">QQ</span><span class="dengluziti2">账号：</li>
+			<li><input type="text" id="zhanghao" name="zhanghao" placeholder="账号为123"></li>
+			<li><span class="dengluziti1">QQ</span><span class="dengluziti2">密码：</li>
+			<li><input type="password" id="mima" name="mima"  placeholder="密码为123"></li>
+			<li class="fl" ><input type="checkbox" value="1"></li>
+			<li class="fl">记住账号</li>
+			<li class="cbt fl"><input type="checkbox" value="1" checked="checked"></li>
+			<li class="fl"><a href="">已阅读并同意《用户协议》</a></li>
+			<li class="fl cbt"   >
+				 <div id="queding"><img id="entergame" src="dl/22/images/26.png"
+				  onmouseover="changeimage1()" onmouseout="changeimage2()"></div>
+			</li>
+			<li class="fl">
+				<input type="image" src="dl/22/images/25.png" id="fast" onmouseover="changeimage3()" onmouseout="changeimage4()">
+
+			</li>
+		</ul>
+	</div>
+</div>
+<div id="lollogodiv">
+	<img src="dl/22/images/lollogo.png" id="lollogo">
+</div>
+<div id="buttominfor">
+	<div id="txgamelogo" class="fl"></div>
+	<div id="roitlogo" class="fl" ></div>
+	<div class="fl buttominforziti1" >腾讯游戏</div>
+	<div class="fl" id="buttominfor-div3">
+		<ul>
+			<li class="buttominforziti2">2012 Roit Games Inc. All Right Reserved</li>
+			<li class="buttominforziti2">Copyright 1998-2012 Tencent Inc. All Right Reserved</li>
+		</ul>
+	</div>
+	<div class="fl" id="buttominfor-div4" >
+		<ul>
+			<li><span>合理安排时间</span><span>享受健康生活</span><span>注意自我保护</span><span>谨防受骗上当</span><span>适度游戏益脑</span><span>沉迷游戏伤身</span><span>抵制不良游戏</span><span>拒绝盗版游戏</span></li>
+			<li><span>粤网文[2011]</span><span>0483-070号</span><span>ISBN</span><span>978-7-89989-145-2</span><span>文网进字&nbsp;[2011]&nbsp;004号</span></li>
+		</ul>
+	</div>
+</div>
+<div id="xdl" style="width: 220px;height: 220px;background-image: url(dl/22/images/bxjg.png);
+background-size: 100%;position: absolute;top: 250px;left: 50%;margin-left: -500px">
+</div>
+
+
+<script type="text/javascript">
+	function changeimage1() {
+		document.getElementById('entergame').src="dl/22/images/261.png";
+	}
+	function changeimage2() {
+		document.getElementById('entergame').src="dl/22/images/26.png";
+	}
+	function changeimage3() {
+		document.getElementById('fast').src="dl/22/images/251.png";
+	}
+	function changeimage4() {
+		document.getElementById('fast').src="dl/22/images/25.png";
+	}
+	function focus_on(){
+		document.getElementById("zhanghao").focus();
+	}
+
+    
+    
+    
+    
+    
+    //AJAX
+	var zhanghao=document.getElementById('zhanghao');
+
+	var mima=document.getElementById('mima');
+//	function lcs(){
+//		if (zhanghao.value=='123' && mima.value=='123') {
+//			window.location.href='LOL.html';
+//		}else{
+//			alert("输入的账号或密码有误！请重新登录。")
+//		}
+//	}
+    var entergame = document.getElementById("entergame");
+    entergame.onclick = function(){
+//            var request = new XMLHttpRequest();
+//            request.open("GET","php/gg.php?ID="+zhanghao.value+"&PASSWORD="+mima.value,true);
+//            request.send();
+//            request.onreadystatechange = function(){
+//                if(request.readyState==4){
+//                    if(request.status==200){
+//                        var data = JSON.parse(request.responseText);
+//                        if(data.success){
+////                            result.innerHTML = data.msg;
+//                            alert("您刚才输入的是"+'"'+data.msg+'"');
+//                            window.location.href = "LOL.html"
+//                        }else{
+////                            result.innerHTML = data.msg;
+//                            alert(data.msg)
+//                        }
+//                    }else{
+//                        alert("error:"+request.status);
+//                    }
+//                }
+//            }
+                   window.location.href = "LOL.html"
+        
+        
+        }
+    
+    
+    
+    //
+   
+</script>
+</body>
+</html>

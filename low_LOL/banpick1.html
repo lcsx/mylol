@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="jq/jquery.min.js"></script>
+	<style type="text/css">
+	*{margin: 0px;padding:0px;}
+	.fl{float: left;}
+	#banpickcontainer{width: 1329px;height: auto;margin: 0 auto;}
+	#top{width: 1329px;height: 100px;background-image: url(banpick/images/banpick_01.gif);}
+	#left1{width: 14px;height: 648px;background-image: url(banpick/images/banpick_02.gif);}
+	#banpickcontainer ul{list-style: none;}
+	#left2li1{width: 195px;height: 16px;background-image: url(banpick/images/banpick_03.gif);}
+	#left2li2{width: 195px;height: 81px;background-image: url(banpick/images/banpick_09.gif);}
+	#left2li3{width: 195px;height: 12px;background-image: url(banpick/images/banpick_11.gif);}
+	#left2li4{width: 195px;height: 81px;background-image: url(banpick/images/banpick_09.gif);}
+	#left2li5{width: 195px;height: 13px;background-image: url(banpick/images/banpick_15.gif);}
+	#left2li6{width: 195px;height: 81px;background-image: url(banpick/images/banpick_09.gif);}
+	#left2li7{width: 195px;height: 12px;background-image: url(banpick/images/banpick_10-19.gif);}
+	#left2li8{width: 195px;height: 81px;background-image: url(banpick/images/banpick_09.gif);}
+	#left2li9{width: 195px;height: 13px;background-image: url(banpick/images/banpick_12-23.gif);}
+	#left2li10{width: 195px;height: 81px;background-image: url(banpick/images/banpick_09.gif);}
+	#left2li11{width: 195px;height: 83px;background-image: url(banpick/images/banpick_27.gif);}
+	#left2li12{width: 195px;height: 50px;}
+	#left2li13{width: 195px;height: 44px;background-image: url(banpick/images/banpick_47.gif);}
+	#left2li12 ul li{float: left;}
+	#left2li12 ul li:nth-child(1){width: 8px;height: 50px;background-image: url(banpick/images/banpick_15-33.gif);}
+	#left2li12 ul li:nth-child(2){width: 50px;height: 50px;background-image: url(banpick/images/banpick_16-34.gif);}
+	#left2li12 ul li:nth-child(3){width: 12px;height: 50px;background-image: url(banpick/images/banpick_17.gif);}
+	#left2li12 ul li:nth-child(4){width: 50px;height: 50px;background-image: url(banpick/images/banpick_16-34.gif);}
+	#left2li12 ul li:nth-child(5){width: 14px;height: 50px;background-image: url(banpick/images/banpick_37.gif);}
+	#left2li12 ul li:nth-child(6){width: 50px;height: 50px;background-image: url(banpick/images/banpick_16-34.gif);}
+	#left2li12 ul li:nth-child(7){width: 11px;height: 50px;background-image: url(banpick/images/banpick_39.gif);}
+	
+
+	#left4li1{width: 195px;height: 16px;background-image: url(banpick/images/banpick_03.gif);}
+	#left4li2{width: 195px;height: 81px;background-image: url(banpick/images/banpick_09.gif);}
+	#left4li3{width: 195px;height: 12px;background-image: url(banpick/images/banpick_11.gif);}
+	#left4li4{width: 195px;height: 81px;background-image: url(banpick/images/banpick_09.gif);}
+	#left4li5{width: 195px;height: 13px;background-image: url(banpick/images/banpick_15.gif);}
+	#left4li6{width: 195px;height: 81px;background-image: url(banpick/images/banpick_09.gif);}
+	#left4li7{width: 195px;height: 12px;background-image: url(banpick/images/banpick_10-19.gif);}
+	#left4li8{width: 195px;height: 81px;background-image: url(banpick/images/banpick_09.gif);}
+	#left4li9{width: 195px;height: 13px;background-image: url(banpick/images/banpick_12-23.gif);}
+	#left4li10{width: 195px;height: 81px;background-image: url(banpick/images/banpick_09.gif);}
+	#left4li11{width: 195px;height: 83px;background-image: url(banpick/images/banpick_27.gif);}
+	#left4li12{width: 195px;height: 50px;}
+	#left4li13{width: 195px;height: 44px;background-image: url(banpick/images/banpick_47.gif);}
+	#left4li12 ul li{float: left;}
+	#left4li12 ul li:nth-child(1){width: 8px;height: 50px;background-image: url(banpick/images/banpick_15-33.gif);}
+	#left4li12 ul li:nth-child(2){width: 50px;height: 50px;background-image: url(banpick/images/banpick_16-34.gif);}
+	#left4li12 ul li:nth-child(3){width: 12px;height: 50px;background-image: url(banpick/images/banpick_17.gif);}
+	#left4li12 ul li:nth-child(4){width: 50px;height: 50px;background-image: url(banpick/images/banpick_16-34.gif);}
+	#left4li12 ul li:nth-child(5){width: 14px;height: 50px;background-image: url(banpick/images/banpick_37.gif);}
+	#left4li12 ul li:nth-child(6){width: 50px;height: 50px;background-image: url(banpick/images/banpick_16-34.gif);}
+	#left4li12 ul li:nth-child(7){width: 11px;height: 50px;background-image: url(banpick/images/banpick_39.gif);}
+
+
+	#lefe3updiv1_li1{width: 15px;height: 519px;background-image: url(banpick/images/banpick_04.gif);}
+	#lefe3updiv1_li2{width: 887px;height: 519px;background-size: 100%;background-image: url(banpick/images/xianchang.jpg);}
+	#lefe3updiv1_li3{width: 11px;height: 519px;background-image: url(banpick/images/banpick_06.gif);}
+	#lefe3updiv1_li2 ul li:nth-child(1){width: 887px;height: 505px;background-image: url();}
+	#lefe3updiv1_li2 ul li:nth-child(2){width: 887px;height: 14px;background-image: url(banpick/images/banpick_29.gif);}
+	#left3down ul li{float: left;}
+	#left3down-li1{width: 10px;height: 129px;background-image: url(banpick/images/banpick_30.gif);}
+	#left3down-li2{width: 892px;height: 129px}
+	#left3down-li2 ul li:nth-child(1){width: 892px;height: 124px;background-image: url(banpick/images/banpick_19.gif);}
+	#left3down-li2 ul li:nth-child(2){width: 892px;height: 5px;background-image: url(banpick/images/banpick_28-49.gif);}
+	#left3down-li3{width: 11px;height: 129px;background-image: url(banpick/images/banpick_32.gif);}
+
+	#left5{width: 12px;height: 648px;background-image: url(banpick/images/banpick_08.gif);}
+	.jinengdiv1 ul li{width: 23px;height: 23px;position: absolute;border:1px solid #888;left: 110px;border-radius: 3px;background-size: 100%;}
+	.yingxiong1{width: 50px;height: 75px;position: absolute;left: 50px;top: 5px;}
+	.yingxiong1 ul li:nth-child(1){width: 53px;height: 53px;border:1px solid #888;border-radius: 3px}
+	.yingxiong1 ul li:nth-child(2){width: 67px;height: 14px;line-height: 18px;text-align: center;font-size: 10px;color: #fff}
+	.jinengdiv1 ul li:nth-child(1){top: 5px}
+	.jinengdiv1 ul li:nth-child(2){top: 35px}
+	#jishi1{width: 30px;height: 30px;border:1px solid red;position: absolute;left: 337px;top: 66px;font-size: 20px;font-family: impact;color: #fff;text-align: center;line-height: 30px}
+	#jishi2{width: 30px;height: 30px;border:1px solid red;position: absolute;left: 962px;top: 66px;font-size: 20px;font-family: impact;color: #fff;text-align: center;line-height: 30px}
+
+		
+		
+	.teams{background-size: 100%}	
+		/*.bpyx{width: 80px;height: 80px;border-radius: 5px;border:1px solid #888;overflow: hidden;}*/
+	</style>
+</head>
+<body>
+<div id="banpickcontainer">
+	<div id="top" style="position: relative;">
+		<div id="jishi1"></div>
+		<div id="jishi2"></div>
+	</div>
+	<div id="main">
+		<div id="left1" class="fl"></div>
+		<div id="left2" class="fl">
+			<ul>
+				<li id="left2li1"></li>
+				<li id="left2li2" name="yingxiongkuang" style="position: relative;">
+					<div class="yingxiong1">
+						<ul>
+							<li class="teams"></li>
+							<li name="team1">name</li>
+						</ul>
+					</div>
+					<div class="jinengdiv1 nidejineng">
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</li>
+				<li id="left2li3"></li>
+				<li id="left2li4"  name="yingxiongkuang" style="position: relative;">
+					<div class="yingxiong1">
+						<ul>
+							<li class="teams"></li>
+							<li name="team1">name</li>
+						</ul>
+					</div>
+					<div class="jinengdiv1 nidejineng">
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</li>
+				<li id="left2li5" id="left1li1"></li>
+				<li id="left2li6"  name="yingxiongkuang" style="position: relative;">
+					<div class="yingxiong1">
+						<ul>
+							<li class="teams"></li>
+							<li name="team1">name</li>
+						</ul>
+					</div>
+					<div class="jinengdiv1">
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</li>
+				<li id="left2li7"></li>
+				<li id="left2li8"  name="yingxiongkuang" style="position: relative;">
+					<div class="yingxiong1">
+						<ul>
+							<li class="teams"></li>
+							<li name="team1">name</li>
+						</ul>
+					</div>
+					<div class="jinengdiv1">
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</li>
+				<li id="left2li9"></li>
+				<li id="left2li10"  name="yingxiongkuang" style="position: relative;">
+					<div class="yingxiong1">
+						<ul>
+							<li class="teams"></li>
+							<li name="team1">name</li>
+						</ul>
+					</div>
+					<div class="jinengdiv1">
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</li>
+				<li id="left2li11"></li>
+				<li id="left2li12">
+					<ul>
+						<li></li>
+						<li class="ban"></li>
+						<li></li>
+						<li class="ban"></li>
+						<li></li>
+						<li class="ban"></li>
+						<li></li>
+					</ul>
+				</li>
+				<li id="left2li13"></li>
+			</ul>
+		</div>
+		<style type="text/css">
+		#banpickyingxiong{width: 864px;height: 320px;margin: 0 auto;overflow: scroll;overflow-x: hidden;overflow-y: hidden; border:3px solid #013844;box-shadow: 0px 5px 10px rgba(1,56,68,.6)}
+		.bpyxs{width: 74px;height: 74px;float: left;border:1px solid #888;border-radius: 5px; }
+		.bpyxs {width: 74px;height: 74px;background-size: 100%}
+		#ZhanHuanShiJiNeng{width: 300px;height: 230px;border-radius: 8px;background-color: rgba(28,28,28,.9);position: absolute;top: -200px;left: 218px;display: none;}
+		.positionab{position: absolute;}
+		.jinenrow1{top: 20px;width: 50px;height: 51px;background-size: 100%;}
+		.jinenrow2{top: 90px;width: 50px;height: 51px;background-size: 100%;}
+		.jinenrow3{top: 160px;width: 50px;height: 51px;background-size: 100%;}
+		#ZhanHuanShiJiNeng div:nth-child(1){background-image: url(banpick/zhaohuanshijineng/spellButton0.png);left: 20px}
+		#ZhanHuanShiJiNeng div:nth-child(2){background-image: url(banpick/zhaohuanshijineng/spellButton1.png);left: 90px}
+		#ZhanHuanShiJiNeng div:nth-child(3){background-image: url(banpick/zhaohuanshijineng/spellButton2.png);left: 160px}
+		#ZhanHuanShiJiNeng div:nth-child(4){background-image: url(banpick/zhaohuanshijineng/spellButton3.png);left: 230px}
+		#ZhanHuanShiJiNeng div:nth-child(5){background-image: url(banpick/zhaohuanshijineng/spellButton4.png);left: 20px}
+		#ZhanHuanShiJiNeng div:nth-child(6){background-image: url(banpick/zhaohuanshijineng/spellButton5.png);left: 90px}
+		#ZhanHuanShiJiNeng div:nth-child(7){background-image: url(banpick/zhaohuanshijineng/spellButton6.png);left: 160px}
+		#ZhanHuanShiJiNeng div:nth-child(8){background-image: url(banpick/zhaohuanshijineng/spellButton7.png);left: 230px}
+		#ZhanHuanShiJiNeng div:nth-child(9){background-image: url(banpick/zhaohuanshijineng/spellButton8.png);left: 20px}
+		#ZhanHuanShiJiNeng div:nth-child(10){background-image: url(banpick/zhaohuanshijineng/spellButton9.png);left: 90px}
+		#ZhanHuanShiJiNeng div:nth-child(11){background-image: url(banpick/zhaohuanshijineng/spellButton10.png);left: 160px}
+		#ZhanHuanShiJiNeng div:nth-child(12){background-image: url(banpick/zhaohuanshijineng/spellButton11.png);left: 230px}
+		#jineng1{width: 50px;height: 50px;border:3px solid #888;position: absolute;top: 50px;left: 310px;background-image: url(banpick/zhaohuanshijineng/spellButton7.png);background-size: 100%;border-radius: 8px}
+		#jienng2{width: 50px;height: 50px;border:3px solid #888;position: absolute;top: 50px;left: 370px;background-image: url(banpick/zhaohuanshijineng/spellButton4.png);background-size: 100%;border-radius: 8px}
+		#queding{width: 150px;height: 50px;position: absolute;top: 51px;left: 460px;border-radius: 5px;background-image: url(banpick/images/queding.png);
+			color: rgb(255,108,0);font-size: 17px;text-align: center;line-height: 52px;background-size: 100%}
+		#jinengdiv{position: relative;width: 870px;height: 180px;margin: 0 auto;border-radius:5px}
+		#banpickyingxiong div {cursor: pointer;}
+		.ban{background-size: 100%;border-radius: 5px;}
+		</style>
+		<div id="left3" class="fl">
+			<div id="left3up" style="width: 913px;height: 519px">
+				<ul>
+					<li class="fl" id="lefe3updiv1_li1"></li>
+					<li id="lefe3updiv1_li2" class="fl">
+						<ul>
+							<li style="width: 887px;height: 505px;">
+								<div id="banpickyingxiong"><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div><div class="fl bpyxs"></div>
+								</div><div id="jinengdiv">
+									<div id="jineng1" class="jineng12"></div>
+									<div id="jienng2" class="jineng12"></div>
+									<div id="queding">确定</div>
+									<div id="ZhanHuanShiJiNeng">
+										<div class="positionab jinenrow1 jinengrow123"></div>
+										<div class="positionab jinenrow1 jinengrow123"></div>
+										<div class="positionab jinenrow1 jinengrow123"></div>
+										<div class="positionab jinenrow1 jinengrow123"></div>
+										<div class="positionab jinenrow2 jinengrow123"></div>
+										<div class="positionab jinenrow2 jinengrow123"></div>
+										<div class="positionab jinenrow2 jinengrow123"></div>
+										<div class="positionab jinenrow2 jinengrow123"></div>
+										<div class="positionab jinenrow3 jinengrow123"></div>
+										<div class="positionab jinenrow3 jinengrow123"></div>
+										<div class="positionab jinenrow3 jinengrow123"></div>
+										<div class="positionab jinenrow3 jinengrow123"></div>
+									</div>
+								</div>
+							</li>
+							<li></li>
+						</ul>
+					</li>
+					<li id="lefe3updiv1_li3" class="fl"></li>
+				</ul>
+			</div>
+			<div id="left3down" style="width: 913px;height: 129px;">
+				<ul>
+					<li id="left3down-li1"></li>
+					<li id="left3down-li2">
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>
+					</li>
+					<li id="left3down-li3"></li>
+				</ul>
+			</div>
+		</div>
+		<div id="left4" class="fl">
+			<ul>
+				<li id="left4li1"></li>
+				<li id="left4li2"  name="yingxiongkuang" style="position: relative;">
+					<div class="yingxiong1">
+						<ul>
+							<li class="teams"></li>
+							<li name="team2">name</li>
+						</ul>
+					</div>
+					<div class="jinengdiv1">
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</li>
+				<li id="left4li3"></li>
+				<li id="left4li4"  name="yingxiongkuang" style="position: relative;">
+					<div class="yingxiong1">
+						<ul>
+							<li class="teams"></li>
+							<li name="team2">name</li>
+						</ul>
+					</div>
+					<div class="jinengdiv1">
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</li>
+				<li id="left4li5"></li>
+				<li id="left4li6"  name="yingxiongkuang" style="position: relative;">
+					<div class="yingxiong1">
+						<ul>
+							<li class="teams"></li>
+							<li name="team2">name</li>
+						</ul>
+					</div>
+					<div class="jinengdiv1">
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</li>
+				<li id="left4li7"></li>
+				<li id="left4li8"  name="yingxiongkuang" style="position: relative;">
+					<div class="yingxiong1">
+						<ul>
+							<li class="teams"></li>
+							<li name="team2">name</li>
+						</ul>
+					</div>
+					<div class="jinengdiv1">
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</li>
+				<li id="left4li9"></li>
+				<li id="left4li10"  name="yingxiongkuang" style="position: relative;">
+					<div class="yingxiong1">
+						<ul>
+							<li class="teams"></li>
+							<li name="team2">name</li>
+						</ul>
+					</div>
+					<div class="jinengdiv1">
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</li>
+				<li id="left4li11"></li>
+				<li id="left4li12">
+					<ul>
+						<li></li>
+						<li class="ban"></li>
+						<li></li>
+						<li class="ban"></li>
+						<li></li>
+						<li class="ban"></li>
+						<li></li>
+					</ul>
+				</li>
+				<li id="left4li13"></li>
+			</ul>
+		</div>
+		<div id="left5" class="fl"></div>
+	</div>
+</div>
+<audio  src="sounds/ChmpSlct_DraftMode.mp3" autoplay="autoplay"></audio>
+<audio  src="sounds/ban.mp3" id="baning"></audio>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+
+
+var banpickyingxiong=document.getElementById('banpickyingxiong');
+
+banpickyingxiong.onmouseover=function(){
+	this.style.overflowY="scroll";
+}
+banpickyingxiong.onmouseout=function(){
+	this.style.overflowY="hidden";
+}
+
+
+
+
+//倒计时60s
+	var jishi1=document.getElementById('jishi1');
+	var jishi2=document.getElementById('jishi2');
+	// T1();
+	function T1(){
+		var t=60;
+		jishi1.innerHTML=t;
+		var timerjishi1=setInterval(function(){
+			t--;
+			jishi1.innerHTML=t;
+			if (t==0) {
+				// alert("");
+				clearInterval(timerjishi1);
+			}
+		},1000)
+	}
+	function T2(){
+		var t=60;
+		jishi2.innerHTML=t;
+		var timerjishi1=setInterval(function(){
+			t--;
+			jishi2.innerHTML=t;
+			if (t==0) {
+				// alert("");
+				clearInterval(timerjishi2)
+			}
+		},1000)
+	}
+//banpick时间随机数
+
+
+
+
+
+	//确定上 悬停的切换
+	$("#queding").on({mouseover:function(){
+		$(this).css("background-image","url(banpick/images/queding1.png)");
+		// alert()
+	},click:function(){
+
+	},mouseout:function(){
+		$(this).css("background-image","url(banpick/images/queding.png)");
+	}}).css("cursor","pointer");
+
+
+
+
+	//召唤师技能悬停显示div和pointer
+	$(".jineng12").on({click:function(){
+		$("#ZhanHuanShiJiNeng").css("display","block");
+	},mouseover:function(){
+		$(this).css("cursor","pointer");
+	}})
+	$(".jinengrow123").css("cursor","pointer");
+
+
+
+	// //移出召唤师div其隐藏
+	$("#ZhanHuanShiJiNeng").on({mouseover:function(){
+		$(this).css("display","block");
+	},mouseout:function(){
+		$(this).css("display","none");
+	}})
+	$(".jinengrow123").mouseover(function(){
+		$("#ZhanHuanShiJiNeng").css("display","block");
+	})
+
+
+
+
+
+
+	var nameteam1arr=[];
+	var onearr=[];
+	var num=5;
+	var yourindex;//你的位置
+	//获取五个不重复的随机数 team1名字随机排序  获取你所在的index
+	function getNum1(){
+		var NameArr1=["LCS LaoChao","LCS GG","LCS Gfaker","你你你","LCS Keyi"];
+		for(var i=0;i<num;i++){
+			var index=Math.floor(Math.random()*NameArr1.length);
+			nameteam1arr[i]=NameArr1[index];
+			NameArr1.splice(index,1);
+			findyouindex();
+		}
+	}
+	function findyouindex(){
+		for(var i=0;i<num;i++){
+			nameteam1arr.index=i;
+			if (nameteam1arr[i]=="你你你") {
+				yourindex=i;
+			}
+		}
+	}
+	getNum1();//youindex在此函数后才有赋值 team1[i].innerHTML也在此后才有用 
+	var team1=document.getElementsByName('team1');
+	for(var i=0;i<num;i++){
+		team1[i].innerHTML=nameteam1arr[i];
+	}
+
+
+
+
+
+
+
+	//team2随机名字
+	var nameteam2arr=[];
+	var onearr2=[];
+	function getNum2(){
+		var NameArr2=["SKT faker","SKT Bang","SKT Duke","SKT Bengi","SKT Blank"];
+		for(var i=0;i<num;i++){
+			var index=Math.floor(Math.random()*NameArr2.length);
+			nameteam2arr[i]=NameArr2[index];
+			NameArr2.splice(index,1);
+		}
+	}
+	
+	getNum2();//youindex在此函数后才有赋值 team1[i].innerHTML也在此后才有用 
+	var team2=document.getElementsByName('team2');
+	for(var i=0;i<num;i++){
+		team2[i].innerHTML=nameteam2arr[i];
+	}
+
+
+
+
+
+	
+	//获取class的对象
+	function getElementsClass(classnames){ 
+		var classobj= new Array();//定义数组 
+		var classint=0;//定义数组的下标 
+		var tags=document.getElementsByTagName("*");//获取HTML的所有标签 
+		for(var i in tags){//对标签进行遍历  
+			if(tags[i].nodeType==1){//判断节点类型 
+				if(tags[i].getAttribute("class") == classnames)//判断和需要CLASS名字相同的，并组成一个数组 
+				{ 
+					classobj[classint]=tags[i];  
+					classint++; 
+				} 
+			} 
+		} 
+		return classobj;//返回组成的数组 
+	} 
+	
+
+
+
+
+	// alert(yourindex);
+
+	
+	
+	//召唤师技能的事件
+
+	var yingxiongkuang=document.getElementsByName('yingxiongkuang');
+	yingxiongkuang[yourindex].style.backgroundImage="url(banpick/images/yxkbg.png)";//yourIndex BG变色
+	// yingxiongkuang[yourindex].getElementsByTagName('li')[2].onclick=function(){
+	// 	alert("2")
+	// }
+
+	var ZhanHuanShiJiNeng=document.getElementById('ZhanHuanShiJiNeng');
+	var jinengrow123=document.getElementById('ZhanHuanShiJiNeng').getElementsByTagName('div');
+	var jineng1=document.getElementById('jineng1');
+	var jineng2=document.getElementById('jienng2');
+	var zhsjinengZT=0;
+	var ZhaoHuanShiJinengArr=["url(banpick/zhaohuanshijineng/spellButton0.png)","url(banpick/zhaohuanshijineng/spellButton1.png)","url(banpick/zhaohuanshijineng/spellButton2.png)","url(banpick/zhaohuanshijineng/spellButton3.png)","url(banpick/zhaohuanshijineng/spellButton4.png)","url(banpick/zhaohuanshijineng/spellButton5.png)","url(banpick/zhaohuanshijineng/spellButton6.png)","url(banpick/zhaohuanshijineng/spellButton7.png)","url(banpick/zhaohuanshijineng/spellButton8.png)","url(banpick/zhaohuanshijineng/spellButton9.png)","url(banpick/zhaohuanshijineng/spellButton10.png)","url(banpick/zhaohuanshijineng/spellButton11.png)","url(banpick/zhaohuanshijineng/spellButton12.png)","url(banpick/zhaohuanshijineng/spellButton13.png)"];
+	jineng1.onclick=function(){
+		zhsjinengZT=0;
+	}
+	jineng2.onclick=function(){
+		zhsjinengZT=1;
+	}
+	for(var i=0;i<jinengrow123.length;i++){
+		jinengrow123[i].index=i;
+		jinengrow123[i].onclick=function(){
+			// alert(this.index);
+			// alert(this.style.background);
+			if (zhsjinengZT==0) {
+				var xx1=this.index;
+				jineng1.style.backgroundImage=ZhaoHuanShiJinengArr[this.index];
+				yingxiongkuang[yourindex].getElementsByTagName('li')[2].style.backgroundImage=ZhaoHuanShiJinengArr[xx1];
+				zhsjinengZT=1;
+			}else if (zhsjinengZT==1){
+				var xx2=this.index;
+				jineng2.style.backgroundImage=ZhaoHuanShiJinengArr[this.index];
+				yingxiongkuang[yourindex].getElementsByTagName('li')[3].style.backgroundImage=ZhaoHuanShiJinengArr[xx2];
+				zhsjinengZT=0;
+				ZhanHuanShiJiNeng.style.display="none";
+			}
+		}
+	}
+	
+
+	var runindex=0;
+
+
+
+
+
+	var yingxiongArr=[];
+
+
+	var banpickyingxiong=document.getElementById('banpickyingxiong');
+
+	for(var i=0;i<115;i++){
+		banpickyingxiong.childNodes[i].style.backgroundImage="url(banpick/yingxiongtx/"+i+".jpg)";
+		// alert(banpickyingxiong.childNodes[]);
+
+	}
+	// banpickyingxiong.childNodes[0].onclick=function(){
+	// 	alert("lb");
+	// }
+	// alert(banpickyingxiong.childNodes[0])
+	var yingxiongArr=[];
+	for(var i=0;i<115;i++){
+		yingxiongArr[i]="url(banpick/yingxiongtx/"+i+".jpg)";
+		// alert(banpickyingxiong.childNodes[]);
+	}
+	// alert(yingxiongArr);
+
+
+
+
+
+
+
+
+	var xuanyingxiong=document.getElementById('banpickyingxiong').getElementsByTagName('div');
+	function keyyixuan(){
+		for(var i=0;i<xuanyingxiong.length;i++){
+				xuanyingxiong[i].index=i;
+
+				xuanyingxiong[i].onclick=function(){
+				// alert(this.index);
+				// alert(yourindex);
+				yingxiongkuang[yourindex].getElementsByTagName('li')[0].style.backgroundImage=yingxiongArr[this.index];
+			}
+		}
+	}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//生成6个随机数
+	var numarrx=[];
+	for(var i=0;i<xuanyingxiong.length;i++){
+		numarrx[i]=i;
+	}
+	var suijishu6=[];//6个随机数0-114
+	function getNum6ge(){
+		for(var i=0;i<6;i++){
+			var index=Math.floor(Math.random()*xuanyingxiong.length);
+			// alert(index);
+			suijishu6[i]=numarrx[index];
+			numarrx.splice(index,1);
+		}
+	}
+	getNum6ge();
+	// alert(numarrx);
+	// alert(suijishu6);
+
+
+
+
+	
+
+
+
+
+
+	//ban的6个对象
+	var bans=getElementsClass("ban");
+	var bansound=document.getElementById('baning');
+	// bans[0].onclick=function(){alert()}
+	//ban顺序
+	var shunxuindex=0;
+	var banshuxu=[0,3,1,4,2,5];
+	var bantimer=setInterval(function(){
+
+		// alert(yingxiongArr.length)
+
+		bans[banshuxu[shunxuindex]].style.backgroundImage=yingxiongArr[suijishu6[shunxuindex]];
+		// alert(banpickyingxiong.childNodes[suijishu6[shunxuindex]]);
+		banpickyingxiong.removeChild(banpickyingxiong.childNodes[suijishu6[shunxuindex]]);
+		// alert(suijishu6[shunxuindex]);
+
+		yingxiongArr.splice(suijishu6[shunxuindex],1);
+		// alert(yingxiongArr);
+
+		shunxuindex++;
+		bansound.play();
+		if (shunxuindex>5) {
+			// alert("sss")
+			clearInterval(bantimer);
+			chooseyingxiong();
+			// alert(shunxuindex);
+			// alert(yingxiongArr.length)
+		}
+	},3000);
+	// alert(suijishu6);
+
+
+	
+
+
+
+
+	//生成10个不重复的随机数
+	// alert(xuanyingxiong.length);//114
+	var suijishu10=[];//10个随机数
+	function getNum10ge(){
+		var numarrx=[];
+		for(var i=0;i<xuanyingxiong.length;i++){
+			numarrx[i]=i;
+		}
+		for(var i=0;i<10;i++){
+			var index=Math.floor(Math.random()*xuanyingxiong.length);
+			suijishu10[i]=numarrx[index];
+			numarrx.splice(index,1);
+		}
+	}
+	// getNum10ge();
+	// alert(suijishu10.length);
+
+//排除自己的index
+
+	var runshuxu=[0,5,6,1,2,7,8,3,4,9];
+	// lunliuindex.splice(yourindex,1);
+	var teams=getElementsClass("teams"); 
+	// for(var i=0;i<teams.length;i++){
+	// 	teams[i].index=i;
+	// 	teams[i].onclick=function(){
+	// 		alert(this.index)
+	// 	} 
+	// }
+	// alert(runshuxu.length)
+	// alert(yourindex);
+	var chooesindex=0;
+	var chooestimer;
+	function chooseyingxiong(){
+			getNum10ge();
+			// alert(suijishu10)
+			chooestimer=setInterval(function(){
+				teams[runshuxu[chooesindex]].style.backgroundImage=yingxiongArr[suijishu10[chooesindex]];
+				banpickyingxiong.removeChild(banpickyingxiong.childNodes[suijishu10[chooesindex]]);
+				yingxiongArr.splice(suijishu10[chooesindex],1);
+				// alert(yingxiongArr.length)
+			chooesindex++;
+			if (chooesindex >10) {
+					alert("1010101010");
+					alert(yingxiongArr.length)
+					clearInterval(chooestimer);
+				}
+			// if (chooesindex==yourindex) {
+			// 	clearInterval(chooestimer);
+			// 	keyyixuan();
+			// }else{
+			// 	chooesindex++;
+			// }
+		},1000)
+			// alert(chooesindex);
+			// 	if (chooesindex >10) {
+			// 		alert("1010101010");
+			// 		alert(yingxiongArr.length)
+			// 		clearInterval(chooestimer);
+			// 	}
+	}
+
+
+});
+
+
+
+
+
+
+</script>
+</body>
+</html>
